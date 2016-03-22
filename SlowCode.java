@@ -33,11 +33,15 @@ public class SlowCode {
 
     
     public static void main(String[] args) {
+	System.out.print("Loading...");
 	try {
-	    Thread.sleep(2);
+	    // Modify this value to increase loading time
+	    // (in ms)
+	    Thread.sleep(10000);
 	} catch (Exception lolex) {
 	    // We're living on the edge
 	}
+	System.out.println("DONE!");
 
 	
         if (args.length < 1 || args.length > 5 || args.length > 1) {
@@ -49,9 +53,9 @@ public class SlowCode {
 
 	Other o = new Other(val);
 
-	Prefacer.preface(1000);
+	Prefacer.preface(3000);
 	
-	System.out.println(Prefacer.nirp);
+	System.out.println(Prefacer.nirp.substring(0,1000));
 	
 	System.out.println("Statistics of value " + val + ":");
 	System.out.println("Chirpy Number? " + Chirp.isChirpy(val));
